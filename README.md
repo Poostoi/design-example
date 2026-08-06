@@ -1,34 +1,13 @@
 # Дизайны — Прототипы
 
-Статичные HTML-прототипы дизайна главной страницы учебного центра «Профессия».
+Статичные HTML-прототипы дизайна главной страницы учебного центра.
 
 ## Просмотр локально
 
 ```bash
 python3 -m http.server 8000
 ```
-
 Откройте http://localhost:8000
-
-## Деплой на GitHub Pages
-
-### Вариант 1: корневая папка репозитория
-
-1. Залейте папку `designs-preview/` в репозиторий
-2. Settings → Pages → Source → Deploy from a branch → `main` / `/designs-preview`
-3. Сайт будет доступен по адресу:
-   ```
-   https://<username>.github.io/<repo>/
-   ```
-
-### Вариант 2: отдельный репозиторий
-
-1. Скопируйте содержимое папки `designs-preview/` в новый репозиторий
-2. Settings → Pages → Source → Deploy from a branch → `main` / `/root`
-3. Сайт будет доступен по адресу:
-   ```
-   https://<username>.github.io/<repo-name>/
-   ```
 
 ## Структура
 
