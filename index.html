@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Дизайны — Учебный центр «Профессия»</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.3/dist/cdn.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        [x-cloak] { display: none !important; }
+        .preview-frame {
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .preview-frame:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px -12px rgba(0,0,0,0.15);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased">
+
+    <header class="bg-white border-b border-slate-100">
+        <div class="max-w-6xl mx-auto px-6 py-10">
+            <div class="flex items-center gap-3 mb-2">
+                <div class="w-10 h-10 bg-slate-900 rounded-xl flex items-center justify-center">
+                    <span class="text-white font-bold text-lg">П</span>
+                </div>
+                <span class="text-xl font-bold text-slate-900">Профессия</span>
+            </div>
+            <h1 class="text-3xl md:text-4xl font-bold text-slate-900 mt-8">Прототипы дизайна главной страницы</h1>
+            <p class="mt-3 text-slate-600 max-w-2xl text-lg">
+                Выберите дизайн, который вам нравится. Кликните по карточке, чтобы открыть превью.
+                В правом нижнем углу каждого превью — кнопка для переключения между дизайнами.
+            </p>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-6 py-12">
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+            <!-- Bento -->
+            <a href="bento.html" class="preview-frame bg-white rounded-2xl overflow-hidden border border-slate-100 group">
+                <div class="aspect-[16/10] bg-gradient-to-br from-stone-100 to-stone-200 relative overflow-hidden">
+                    <div class="absolute inset-4 grid grid-cols-2 gap-2">
+                        <div class="bg-white rounded-lg shadow-sm col-span-2 flex items-end p-3">
+                            <span class="text-xs font-bold text-slate-900">Bento</span>
+                        </div>
+                        <div class="bg-slate-900 rounded-lg"></div>
+                        <div class="bg-amber-500 rounded-lg"></div>
+                    </div>
+                </div>
+                <div class="p-5">
+                    <div class="flex items-center justify-between">
+                        <h3 class="font-semibold text-slate-900">Bento</h3>
+                        <span class="text-xs text-slate-400">Сетка карточек</span>
+                    </div>
+                    <p class="mt-1 text-sm text-slate-500">Модульная сетка с блоками разного размера</p>
+                </div>
+            </a>
+
+            <!-- Editorial -->
+            <a href="editorial.html" class="preview-frame bg-white rounded-2xl overflow-hidden border border-slate-100 group">
+                <div class="aspect-[16/10] bg-gradient-to-br from-slate-50 to-slate-100 relative overflow-hidden flex items-center justify-center">
+                    <div class="text-center">
+                        <p class="text-[10px] uppercase tracking-widest text-slate-400">Журнал</p>
+                        <div class="mt-2 space-y-1.5">
+                            <div class="h-1.5 w-24 bg-slate-800 rounded mx-auto"></div>
+                            <div class="h-1.5 w-16 bg-slate-300 rounded mx-auto"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-5">
+                    <div class="flex items-center justify-between">
+                        <h3 class="font-semibold text-slate-900">Editorial</h3>
+                        <span class="text-xs text-slate-400">Журнальный</span>
+                    </div>
+                    <p class="mt-1 text-sm text-slate-500">Типографика и вёрстка как в журнале</p>
+                </div>
+            </a>
+
+            <!-- Dark -->
+            <a href="dark.html" class="preview-frame bg-white rounded-2xl overflow-hidden border border-slate-100 group">
+                <div class="aspect-[16/10] bg-slate-950 relative overflow-hidden">
+                    <div class="absolute inset-4 bg-slate-900 rounded-lg flex items-center justify-center">
+                        <div class="space-y-2">
+                            <div class="h-1.5 w-20 bg-slate-700 rounded mx-auto"></div>
+                            <div class="h-1.5 w-14 bg-indigo-500 rounded mx-auto"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-5">
+                    <div class="flex items-center justify-between">
+                        <h3 class="font-semibold text-slate-900">Dark</h3>
+                        <span class="text-xs text-slate-400">Тёмная тема</span>
+                    </div>
+                    <p class="mt-1 text-sm text-slate-500">Премиальный тёмный дизайн с акцентами</p>
+                </div>
+            </a>
+
+            <!-- Colorful -->
+            <a href="colorful.html" class="preview-frame bg-white rounded-2xl overflow-hidden border border-slate-100 group">
+                <div class="aspect-[16/10] bg-gradient-to-br from-orange-100 via-pink-100 to-violet-100 relative overflow-hidden">
+                    <div class="absolute inset-4 flex items-center justify-center">
+                        <div class="text-center">
+                            <div class="inline-block bg-gradient-to-r from-orange-400 to-pink-400 text-white text-xs font-bold px-4 py-2 rounded-xl">Красочный</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-5">
+                    <div class="flex items-center justify-between">
+                        <h3 class="font-semibold text-slate-900">Colorful</h3>
+                        <span class="text-xs text-slate-400">Красочный</span>
+                    </div>
+                    <p class="mt-1 text-sm text-slate-500">Яркие градиенты и мягкие тени</p>
+                </div>
+            </a>
+
+            <!-- Minimal -->
+            <a href="minimal.html" class="preview-frame bg-white rounded-2xl overflow-hidden border border-slate-100 group">
+                <div class="aspect-[16/10] bg-white relative overflow-hidden border-b border-slate-100">
+                    <div class="absolute inset-0 flex flex-col justify-center items-start px-6">
+                        <div class="h-2 w-24 bg-slate-400 rounded mb-2"></div>
+                        <div class="h-3 w-32 bg-slate-900 rounded mb-3"></div>
+                        <div class="h-1.5 w-20 bg-slate-200 rounded"></div>
+                    </div>
+                </div>
+                <div class="p-5">
+                    <div class="flex items-center justify-between">
+                        <h3 class="font-semibold text-slate-900">Minimal</h3>
+                        <span class="text-xs text-slate-400">Минимализм</span>
+                    </div>
+                    <p class="mt-1 text-sm text-slate-500">Чистая типографика, много воздуха</p>
+                </div>
+            </a>
+
+            <!-- Gradient -->
+            <a href="gradient.html" class="preview-frame bg-white rounded-2xl overflow-hidden border border-slate-100 group">
+                <div class="aspect-[16/10] relative overflow-hidden" style="background: linear-gradient(135deg, #667eea, #764ba2);">
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <div class="space-y-2">
+                            <div class="h-1.5 w-20 bg-white/60 rounded mx-auto"></div>
+                            <div class="h-2 w-28 bg-white rounded mx-auto"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-5">
+                    <div class="flex items-center justify-between">
+                        <h3 class="font-semibold text-slate-900">Gradient</h3>
+                        <span class="text-xs text-slate-400">Градиенты</span>
+                    </div>
+                    <p class="mt-1 text-sm text-slate-500">Плавные цветовые переходы и blur-эффекты</p>
+                </div>
+            </a>
+
+            <!-- Glass -->
+            <a href="glass.html" class="preview-frame bg-white rounded-2xl overflow-hidden border border-slate-100 group">
+                <div class="aspect-[16/10] relative overflow-hidden" style="background: linear-gradient(135deg, #667eea, #764ba2, #f093fb);">
+                    <div class="absolute inset-4 backdrop-blur-md bg-white/20 rounded-xl border border-white/30 flex items-center justify-center">
+                        <span class="text-white text-xs font-medium">Glass</span>
+                    </div>
+                </div>
+                <div class="p-5">
+                    <div class="flex items-center justify-between">
+                        <h3 class="font-semibold text-slate-900">Glass</h3>
+                        <span class="text-xs text-slate-400">Glassmorphism</span>
+                    </div>
+                    <p class="mt-1 text-sm text-slate-500">Полупрозрачные элементы с размытием</p>
+                </div>
+            </a>
+
+            <!-- Brutalist -->
+            <a href="brutalist.html" class="preview-frame bg-white rounded-2xl overflow-hidden border border-slate-100 group">
+                <div class="aspect-[16/10] bg-[#f5f1e8] relative overflow-hidden border-b-[3px] border-black">
+                    <div class="absolute inset-4 bg-white border-[2px] border-black flex items-center justify-center" style="box-shadow: 4px 4px 0 0 #000;">
+                        <span class="font-bold text-sm text-black">BRUTAL</span>
+                    </div>
+                </div>
+                <div class="p-5">
+                    <div class="flex items-center justify-between">
+                        <h3 class="font-semibold text-slate-900">Brutalist</h3>
+                        <span class="text-xs text-slate-400">Брутализм</span>
+                    </div>
+                    <p class="mt-1 text-sm text-slate-500">Жёсткие рамки, тени-ступеньки, контраст</p>
+                </div>
+            </a>
+
+            <!-- Pastel -->
+            <a href="pastel.html" class="preview-frame bg-white rounded-2xl overflow-hidden border border-slate-100 group">
+                <div class="aspect-[16/10] bg-[#faf6f0] relative overflow-hidden">
+                    <div class="absolute inset-4 grid grid-cols-2 gap-2">
+                        <div class="bg-[#ffd9c0] rounded-2xl flex items-end p-2"><span class="text-[10px] font-semibold text-stone-700">peach</span></div>
+                        <div class="bg-[#f8c8d4] rounded-2xl flex items-end p-2"><span class="text-[10px] font-semibold text-stone-700">rose</span></div>
+                        <div class="bg-[#dccfe8] rounded-2xl flex items-end p-2"><span class="text-[10px] font-semibold text-stone-700">lilac</span></div>
+                        <div class="bg-[#cfdfe8] rounded-2xl flex items-end p-2"><span class="text-[10px] font-semibold text-stone-700">sky</span></div>
+                    </div>
+                </div>
+                <div class="p-5">
+                    <div class="flex items-center justify-between">
+                        <h3 class="font-semibold text-slate-900">Pastel</h3>
+                        <span class="text-xs text-slate-400">Мягкие тона</span>
+                    </div>
+                    <p class="mt-1 text-sm text-slate-500">Пастельные цвета, спокойная палитра</p>
+                </div>
+            </a>
+
+        </div>
+
+        <div class="mt-16 text-center">
+            <p class="text-sm text-slate-400">
+                9 вариантов дизайна · Учебный центр «Профессия»
+            </p>
+        </div>
+    </main>
+
+    <footer class="bg-white border-t border-slate-100 mt-12">
+        <div class="max-w-6xl mx-auto px-6 py-8 text-center text-sm text-slate-500">
+            © 2024 Учебный центр «Профессия»
+        </div>
+    </footer>
+
+</body>
+</html>

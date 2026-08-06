@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Профессия — Минимализм</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.3/dist/cdn.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        [x-cloak] { display: none !important; }
+    </style>
+</head>
+<body class="bg-white text-neutral-900 antialiased">
+
+    <header class="border-b border-neutral-100">
+        <div class="max-w-5xl mx-auto px-6 py-6 flex items-center justify-between">
+            <a href="#" class="text-lg font-medium tracking-tight">Профессия</a>
+            <nav class="hidden md:flex items-center gap-10">
+                <a href="#directions" class="text-sm text-neutral-500 hover:text-neutral-900 transition">Направления</a>
+                <a href="#about" class="text-sm text-neutral-500 hover:text-neutral-900 transition">О центре</a>
+                <a href="#contact" class="text-sm text-neutral-500 hover:text-neutral-900 transition">Контакты</a>
+            </nav>
+            <a href="tel:+37377755722" class="text-sm font-medium border-b border-neutral-900 hover:border-transparent transition">
+                +373 777 55 722
+            </a>
+        </div>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-6">
+
+        <section class="py-32 md:py-48">
+            <div class="max-w-3xl">
+                <p class="text-sm text-neutral-400 mb-8 tracking-wide uppercase">Учебный центр в Тирасполе</p>
+                <h1 class="text-5xl md:text-7xl font-light leading-[1.05] tracking-tight text-neutral-900">
+                    Начни новую<br>профессию
+                </h1>
+                <p class="mt-10 text-lg md:text-xl text-neutral-500 leading-relaxed max-w-xl font-light">
+                    Практические курсы с нуля. Кулинария, красота, творчество, офис. Коротко о главном — без воды.
+                </p>
+                <div class="mt-14 flex flex-col sm:flex-row gap-3">
+                    <a href="#directions" class="inline-flex items-center justify-center px-6 py-3 bg-neutral-900 text-white text-sm font-medium hover:bg-neutral-800 transition">
+                        Выбрать направление
+                    </a>
+                    <a href="#about" class="inline-flex items-center justify-center px-6 py-3 text-sm font-medium border border-neutral-200 hover:border-neutral-900 transition">
+                        О центре
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="directions" class="py-24 border-t border-neutral-100">
+            <h2 class="text-sm uppercase tracking-wider text-neutral-400 mb-16">Направления</h2>
+            <div class="grid md:grid-cols-2 gap-px bg-neutral-100">
+                <a href="#" class="bg-white p-10 group hover:bg-neutral-50 transition">
+                    <p class="text-xs text-neutral-400 mb-3">01</p>
+                    <h3 class="text-2xl font-light mb-3">Кулинария</h3>
+                    <p class="text-sm text-neutral-500 leading-relaxed">Повар, кондитер, бариста. Полный цикл приготовления от ингредиентов до подачи.</p>
+                    <p class="mt-6 text-sm text-neutral-900 group-hover:underline">от 28 000 ₽</p>
+                </a>
+                <a href="#" class="bg-white p-10 group hover:bg-neutral-50 transition">
+                    <p class="text-xs text-neutral-400 mb-3">02</p>
+                    <h3 class="text-2xl font-light mb-3">Красота</h3>
+                    <p class="text-sm text-neutral-500 leading-relaxed">Парикмахер, визажист, маникюр. Современные техники и работа с клиентами.</p>
+                    <p class="mt-6 text-sm text-neutral-900 group-hover:underline">от 22 000 ₽</p>
+                </a>
+                <a href="#" class="bg-white p-10 group hover:bg-neutral-50 transition">
+                    <p class="text-xs text-neutral-400 mb-3">03</p>
+                    <h3 class="text-2xl font-light mb-3">Творчество</h3>
+                    <p class="text-sm text-neutral-500 leading-relaxed">Фотография, графический дизайн, работа в Figma и Photoshop.</p>
+                    <p class="mt-6 text-sm text-neutral-900 group-hover:underline">от 28 000 ₽</p>
+                </a>
+                <a href="#" class="bg-white p-10 group hover:bg-neutral-50 transition">
+                    <p class="text-xs text-neutral-400 mb-3">04</p>
+                    <h3 class="text-2xl font-light mb-3">Рабочие</h3>
+                    <p class="text-sm text-neutral-500 leading-relaxed">Бухгалтерия, электрика, шиномонтаж. Практика и трудоустройство.</p>
+                    <p class="mt-6 text-sm text-neutral-900 group-hover:underline">от 20 000 ₽</p>
+                </a>
+            </div>
+        </section>
+
+        <section id="about" class="py-24 border-t border-neutral-100">
+            <h2 class="text-sm uppercase tracking-wider text-neutral-400 mb-16">О центре</h2>
+            <div class="grid md:grid-cols-4 gap-12">
+                <div>
+                    <p class="text-4xl font-light text-neutral-900">15</p>
+                    <p class="text-sm text-neutral-500 mt-2">лет на рынке</p>
+                </div>
+                <div>
+                    <p class="text-4xl font-light text-neutral-900">2 500+</p>
+                    <p class="text-sm text-neutral-500 mt-2">выпускников</p>
+                </div>
+                <div>
+                    <p class="text-4xl font-light text-neutral-900">12</p>
+                    <p class="text-sm text-neutral-500 mt-2">направлений</p>
+                </div>
+                <div>
+                    <p class="text-4xl font-light text-neutral-900">85%</p>
+                    <p class="text-sm text-neutral-500 mt-2">трудоустройство</p>
+                </div>
+            </div>
+            <p class="mt-16 text-xl md:text-2xl text-neutral-700 leading-relaxed max-w-3xl font-light">
+                Мы делаем обучение практическим и понятным. Без лишней теории — реальные навыки за реальные сроки.
+            </p>
+        </section>
+
+        <section id="contact" class="py-24 border-t border-neutral-100">
+            <h2 class="text-sm uppercase tracking-wider text-neutral-400 mb-16">Контакты</h2>
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <p class="text-sm text-neutral-400 mb-3">Адрес</p>
+                    <p class="text-lg text-neutral-900">г. Тирасполь, ул. Юности, 10/3</p>
+                </div>
+                <div>
+                    <p class="text-sm text-neutral-400 mb-3">Телефон</p>
+                    <a href="tel:+37377755722" class="text-lg text-neutral-900 hover:underline">+373 777 55 722</a>
+                </div>
+            </div>
+            <a href="tel:+37377755722" class="mt-16 inline-flex items-center text-sm font-medium border-b border-neutral-900 hover:border-transparent transition">
+                Позвонить и записаться →
+            </a>
+        </section>
+
+    </main>
+
+    <footer class="border-t border-neutral-100 mt-24">
+        <div class="max-w-5xl mx-auto px-6 py-10 flex flex-col md:flex-row items-center justify-between gap-4">
+            <p class="text-sm text-neutral-500">© 2024 Учебный центр «Профессия»</p>
+            <p class="text-sm text-neutral-500">professiyau@mail.ru</p>
+        </div>
+    </footer>
+
+    <!-- FAB: плавающее меню переключения дизайнов -->
+    <div x-data="{ open: false }" class="fixed bottom-6 right-6 z-50">
+        <div x-show="open" x-cloak x-transition.opacity
+             @click.away="open = false"
+             class="absolute bottom-16 right-0 w-64 rounded-2xl bg-white border border-slate-100 shadow-2xl shadow-slate-300/40 py-2 mb-2">
+            <a href="index.html" class="flex items-center gap-2.5 px-4 py-2.5 text-sm font-medium text-slate-700 hover:bg-slate-50 hover:text-indigo-600 transition border-b border-slate-100">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                </svg>
+                Витрина дизайнов
+            </a>
+            <div class="py-1">
+                <p class="px-4 py-1.5 text-xs font-semibold text-slate-400 uppercase tracking-wider">Дизайны</p>
+                <a href="bento.html" class="flex items-center justify-between px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-indigo-600 transition">
+                    <span class="font-medium">Bento</span>
+                    <span class="text-xs text-slate-400">Сетка карточек</span>
+                </a>
+                <a href="editorial.html" class="flex items-center justify-between px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-indigo-600 transition">
+                    <span class="font-medium">Editorial</span>
+                    <span class="text-xs text-slate-400">Журнальный</span>
+                </a>
+                <a href="dark.html" class="flex items-center justify-between px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-indigo-600 transition">
+                    <span class="font-medium">Dark</span>
+                    <span class="text-xs text-slate-400">Тёмная тема</span>
+                </a>
+                <a href="colorful.html" class="flex items-center justify-between px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-indigo-600 transition">
+                    <span class="font-medium">Colorful</span>
+                    <span class="text-xs text-slate-400">Красочный</span>
+                </a>
+                <a href="minimal.html" class="flex items-center justify-between px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-indigo-600 transition">
+                    <span class="font-medium">Minimal</span>
+                    <span class="text-xs text-slate-400">Минимализм</span>
+                </a>
+                <a href="gradient.html" class="flex items-center justify-between px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-indigo-600 transition">
+                    <span class="font-medium">Gradient</span>
+                    <span class="text-xs text-slate-400">Градиенты</span>
+                </a>
+                <a href="glass.html" class="flex items-center justify-between px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-indigo-600 transition">
+                    <span class="font-medium">Glass</span>
+                    <span class="text-xs text-slate-400">Glassmorphism</span>
+                </a>
+                <a href="brutalist.html" class="flex items-center justify-between px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-indigo-600 transition">
+                    <span class="font-medium">Brutalist</span>
+                    <span class="text-xs text-slate-400">Брутализм</span>
+                </a>
+                <a href="pastel.html" class="flex items-center justify-between px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-indigo-600 transition">
+                    <span class="font-medium">Pastel</span>
+                    <span class="text-xs text-slate-400">Мягкие тона</span>
+                </a>
+            </div>
+        </div>
+
+        <button @click="open = !open"
+                class="flex items-center justify-center w-14 h-14 rounded-full bg-slate-900 text-white shadow-lg shadow-slate-400/30 hover:bg-slate-800 hover:scale-105 transition-all">
+            <svg x-show="!open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+            <svg x-show="open" x-cloak class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </button>
+    </div>
+</body>
+</html>

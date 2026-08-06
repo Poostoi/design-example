@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Профессия — Мягкие тона</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.3/dist/cdn.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'DM Sans', sans-serif; }
+        [x-cloak] { display: none !important; }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cream: '#faf6f0',
+                        sand: '#f0e6d6',
+                        peach: '#ffd9c0',
+                        rose: '#f8c8d4',
+                        sage: '#c9d6c2',
+                        sky: '#cfdfe8',
+                        lilac: '#dccfe8',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-cream text-stone-800 antialiased">
+
+    <header class="sticky top-0 z-50 bg-cream/80 backdrop-blur-md border-b border-stone-200/40">
+        <div class="max-w-5xl mx-auto px-6 py-5 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-2">
+                <div class="w-9 h-9 bg-rose rounded-2xl"></div>
+                <span class="text-lg font-semibold tracking-tight">Профессия</span>
+            </a>
+            <nav class="hidden md:flex items-center gap-8">
+                <a href="#directions" class="text-sm text-stone-600 hover:text-stone-900 transition">Направления</a>
+                <a href="#about" class="text-sm text-stone-600 hover:text-stone-900 transition">О центре</a>
+                <a href="#contact" class="text-sm text-stone-600 hover:text-stone-900 transition">Контакты</a>
+            </nav>
+            <a href="tel:+37377755722" class="text-sm font-medium bg-stone-900 text-cream px-5 py-2.5 rounded-full hover:bg-stone-800 transition">
+                +373 777 55 722
+            </a>
+        </div>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-6">
+
+        <section class="py-24 md:py-32">
+            <div class="max-w-2xl">
+                <div class="inline-flex items-center gap-2 bg-rose/40 rounded-full px-4 py-1.5 mb-8">
+                    <span class="w-1.5 h-1.5 rounded-full bg-rose"></span>
+                    <span class="text-sm font-medium text-stone-700">Учебный центр в Тирасполе</span>
+                </div>
+
+                <h1 class="text-5xl md:text-6xl lg:text-7xl font-semibold leading-[1.05] tracking-tight text-stone-900">
+                    Выбери профессию,<br>
+                    которая тебе<br>
+                    <span class="italic text-stone-700">по душе</span>
+                </h1>
+
+                <p class="mt-8 text-lg text-stone-600 leading-relaxed max-w-lg">
+                    Кулинария, красота, творчество, рабочие специальности. Мягкий старт в новую карьеру — без стресса и перегруза.
+                </p>
+
+                <div class="mt-12 flex flex-col sm:flex-row gap-3">
+                    <a href="#directions" class="inline-flex items-center justify-center bg-stone-900 text-cream px-7 py-3.5 rounded-full font-medium hover:bg-stone-800 transition">
+                        Выбрать направление
+                    </a>
+                    <a href="#about" class="inline-flex items-center justify-center bg-sand/60 text-stone-800 px-7 py-3.5 rounded-full font-medium hover:bg-sand transition">
+                        О центре
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="directions" class="py-16">
+            <h2 class="text-3xl md:text-4xl font-semibold tracking-tight mb-12">Направления</h2>
+
+            <div class="grid md:grid-cols-2 gap-5">
+                <a href="#" class="group bg-peach/40 rounded-3xl p-8 hover:bg-peach/60 transition">
+                    <p class="text-xs font-semibold text-stone-500 uppercase tracking-wider mb-4">01</p>
+                    <h3 class="text-2xl font-semibold mb-2">Кулинария</h3>
+                    <p class="text-stone-600 mb-6">Повар · Кондитер · Бариста</p>
+                    <p class="text-sm font-medium text-stone-800">от 28 000 ₽ →</p>
+                </a>
+                <a href="#" class="group bg-rose/40 rounded-3xl p-8 hover:bg-rose/60 transition">
+                    <p class="text-xs font-semibold text-stone-500 uppercase tracking-wider mb-4">02</p>
+                    <h3 class="text-2xl font-semibold mb-2">Красота</h3>
+                    <p class="text-stone-600 mb-6">Парикмахер · Визажист · Маникюр</p>
+                    <p class="text-sm font-medium text-stone-800">от 22 000 ₽ →</p>
+                </a>
+                <a href="#" class="group bg-lilac/40 rounded-3xl p-8 hover:bg-lilac/60 transition">
+                    <p class="text-xs font-semibold text-stone-500 uppercase tracking-wider mb-4">03</p>
+                    <h3 class="text-2xl font-semibold mb-2">Творчество</h3>
+                    <p class="text-stone-600 mb-6">Фотограф · Дизайнер</p>
+                    <p class="text-sm font-medium text-stone-800">от 28 000 ₽ →</p>
+                </a>
+                <a href="#" class="group bg-sky/40 rounded-3xl p-8 hover:bg-sky/60 transition">
+                    <p class="text-xs font-semibold text-stone-500 uppercase tracking-wider mb-4">04</p>
+                    <h3 class="text-2xl font-semibold mb-2">Рабочие</h3>
+                    <p class="text-stone-600 mb-6">Бухгалтер · Электрик</p>
+                    <p class="text-sm font-medium text-stone-800">от 20 000 ₽ →</p>
+                </a>
+            </div>
+        </section>
+
+        <section id="about" class="py-16">
+            <div class="bg-sage/30 rounded-3xl p-10 md:p-14">
+                <h2 class="text-3xl md:text-4xl font-semibold tracking-tight mb-10">О центре</h2>
+                <div class="grid md:grid-cols-4 gap-8">
+                    <div>
+                        <p class="text-4xl font-semibold text-stone-900">15</p>
+                        <p class="text-sm text-stone-600 mt-2">лет</p>
+                    </div>
+                    <div>
+                        <p class="text-4xl font-semibold text-stone-900">2 500+</p>
+                        <p class="text-sm text-stone-600 mt-2">выпускников</p>
+                    </div>
+                    <div>
+                        <p class="text-4xl font-semibold text-stone-900">12</p>
+                        <p class="text-sm text-stone-600 mt-2">направлений</p>
+                    </div>
+                    <div>
+                        <p class="text-4xl font-semibold text-stone-900">85%</p>
+                        <p class="text-sm text-stone-600 mt-2">трудоустройство</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-16">
+            <div class="text-center max-w-2xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-semibold tracking-tight mb-4">Свяжитесь с нами</h2>
+                <p class="text-stone-600 mb-8">Расскажем про курсы, расписание и поможем выбрать направление.</p>
+                <div class="flex flex-col sm:flex-row gap-3 justify-center">
+                    <a href="tel:+37377755722" class="inline-flex items-center justify-center bg-stone-900 text-cream px-7 py-3.5 rounded-full font-medium hover:bg-stone-800 transition">
+                        Позвонить
+                    </a>
+                    <a href="mailto:professiyau@mail.ru" class="inline-flex items-center justify-center bg-sand/60 text-stone-800 px-7 py-3.5 rounded-full font-medium hover:bg-sand transition">
+                        Написать
+                    </a>
+                </div>
+                <p class="mt-10 text-sm text-stone-500">г. Тирасполь, ул. Юности, 10/3</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="border-t border-stone-200/40 mt-12">
+        <div class="max-w-5xl mx-auto px-6 py-8 text-center text-sm text-stone-500">
+            © 2024 Учебный центр «Профессия»
+        </div>
+    </footer>
+
+    <!-- FAB: плавающее меню переключения дизайнов -->
+    <div x-data="{ open: false }" class="fixed bottom-6 right-6 z-50">
+        <div x-show="open" x-cloak x-transition.opacity
+             @click.away="open = false"
+             class="absolute bottom-16 right-0 w-64 rounded-2xl bg-white border border-slate-100 shadow-2xl shadow-slate-300/40 py-2 mb-2">
+            <a href="index.html" class="flex items-center gap-2.5 px-4 py-2.5 text-sm font-medium text-slate-700 hover:bg-slate-50 hover:text-indigo-600 transition border-b border-slate-100">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                </svg>
+                Витрина дизайнов
+            </a>
+            <div class="py-1">
+                <p class="px-4 py-1.5 text-xs font-semibold text-slate-400 uppercase tracking-wider">Дизайны</p>
+                <a href="bento.html" class="flex items-center justify-between px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-indigo-600 transition">
+                    <span class="font-medium">Bento</span>
+                    <span class="text-xs text-slate-400">Сетка карточек</span>
+                </a>
+                <a href="editorial.html" class="flex items-center justify-between px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-indigo-600 transition">
+                    <span class="font-medium">Editorial</span>
+                    <span class="text-xs text-slate-400">Журнальный</span>
+                </a>
+                <a href="dark.html" class="flex items-center justify-between px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-indigo-600 transition">
+                    <span class="font-medium">Dark</span>
+                    <span class="text-xs text-slate-400">Тёмная тема</span>
+                </a>
+                <a href="colorful.html" class="flex items-center justify-between px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-indigo-600 transition">
+                    <span class="font-medium">Colorful</span>
+                    <span class="text-xs text-slate-400">Красочный</span>
+                </a>
+                <a href="minimal.html" class="flex items-center justify-between px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-indigo-600 transition">
+                    <span class="font-medium">Minimal</span>
+                    <span class="text-xs text-slate-400">Минимализм</span>
+                </a>
+                <a href="gradient.html" class="flex items-center justify-between px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-indigo-600 transition">
+                    <span class="font-medium">Gradient</span>
+                    <span class="text-xs text-slate-400">Градиенты</span>
+                </a>
+                <a href="glass.html" class="flex items-center justify-between px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-indigo-600 transition">
+                    <span class="font-medium">Glass</span>
+                    <span class="text-xs text-slate-400">Glassmorphism</span>
+                </a>
+                <a href="brutalist.html" class="flex items-center justify-between px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-indigo-600 transition">
+                    <span class="font-medium">Brutalist</span>
+                    <span class="text-xs text-slate-400">Брутализм</span>
+                </a>
+                <a href="pastel.html" class="flex items-center justify-between px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-indigo-600 transition">
+                    <span class="font-medium">Pastel</span>
+                    <span class="text-xs text-slate-400">Мягкие тона</span>
+                </a>
+            </div>
+        </div>
+
+        <button @click="open = !open"
+                class="flex items-center justify-center w-14 h-14 rounded-full bg-slate-900 text-white shadow-lg shadow-slate-400/30 hover:bg-slate-800 hover:scale-105 transition-all">
+            <svg x-show="!open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+            <svg x-show="open" x-cloak class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </button>
+    </div>
+</body>
+</html>
