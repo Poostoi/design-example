@@ -14,15 +14,15 @@
             theme: {
                 extend: {
                     colors: {
-                        cream: '#FFFBF5',
-                        ivory: '#FFF8EE',
-                        terracotta: '#C75B39',
-                        rust: '#A64B2E',
-                        burnt: '#D4763A',
-                        warmbrown: '#5C4033',
-                        warmgray: '#6B5E54',
-                        sand: '#E8DDD4',
-                        peach: '#F5E6DC'
+                        primary: '#4A90C2',
+                        'primary-dark': '#3A7AAB',
+                        dark: '#2C3E50',
+                        muted: '#6B7C8C',
+                        bgsoft: '#F0F6FA',
+                        bgsky: '#D4E8F0',
+                        accent: '#E8A5BC',
+                        'accent-text': '#C97A95',
+                        white: '#FFFFFF'
                     },
                     fontFamily: {
                         serif: ['Cormorant Garamond', 'Georgia', 'serif'],
@@ -42,20 +42,20 @@
         }
     </style>
 </head>
-<body class="bg-cream font-sans text-warmbrown antialiased">
+<body class="bg-white font-sans text-dark antialiased">
 
     <!-- Header -->
     <header class="py-6 px-6 md:px-12 lg:px-20">
         <div class="max-w-7xl mx-auto flex items-center justify-between">
-            <a href="#" class="font-serif text-3xl font-bold text-warmbrown tracking-tight">
+            <a href="#" class="font-serif text-3xl font-bold text-dark tracking-tight">
                 Профессия
             </a>
-            <nav class="hidden md:flex items-center gap-10 font-sans text-sm tracking-wide text-warmgray">
-                <a href="#napravleniya" class="hover:text-terracotta transition-colors">Направления</a>
-                <a href="#preimushestva" class="hover:text-terracotta transition-colors">Преимущества</a>
-                <a href="#kontakty" class="hover:text-terracotta transition-colors">Контакты</a>
+            <nav class="hidden md:flex items-center gap-10 font-sans text-sm tracking-wide text-muted">
+                <a href="#napravleniya" class="hover:text-primary transition-colors">Направления</a>
+                <a href="#preimushestva" class="hover:text-primary transition-colors">Преимущества</a>
+                <a href="#kontakty" class="hover:text-primary transition-colors">Контакты</a>
             </nav>
-            <a href="tel:077755722" class="md:hidden text-terracotta font-medium">
+            <a href="tel:077755722" class="md:hidden text-primary font-medium">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
                 </svg>
@@ -64,65 +64,71 @@
     </header>
 
     <!-- Hero -->
-    <section class="relative overflow-hidden">
-        <div class="max-w-7xl mx-auto px-6 md:px-12 lg:px-20 py-16 md:py-24 lg:py-32">
+    <section class="relative overflow-hidden bg-gradient-to-b from-bgsoft to-white">
+        <!-- Сакура: размытые блобы -->
+        <div class="absolute top-10 left-20 w-96 h-96 bg-accent/15 rounded-full blur-3xl"></div>
+        <div class="absolute top-40 right-10 w-80 h-80 bg-primary/10 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-20 left-1/3 w-72 h-72 bg-accent/10 rounded-full blur-3xl"></div>
+
+        <div class="max-w-7xl mx-auto px-6 md:px-12 lg:px-20 py-16 md:py-24 lg:py-32 relative">
             <div class="grid lg:grid-cols-12 gap-12 items-center">
                 <div class="lg:col-span-7">
-                    <p class="font-sans text-sm tracking-[0.2em] uppercase text-terracotta mb-6">Учебный центр в Тирасполе</p>
-                    <h1 class="font-serif text-5xl md:text-6xl lg:text-7xl font-medium leading-tight text-warmbrown mb-8">
+                    <p class="font-sans text-sm tracking-[0.2em] uppercase text-primary mb-6">Учебный центр в Тирасполе</p>
+                    <h1 class="font-serif text-5xl md:text-6xl lg:text-7xl font-medium leading-tight text-dark mb-8">
                         Научись<br>
-                        <em class="font-serif italic text-terracotta">профессии,</em><br>
+                        <em class="font-serif italic text-accent-text">профессии,</em><br>
                         которая кормит
                     </h1>
-                    <p class="font-sans text-lg md:text-xl text-warmgray max-w-lg leading-relaxed mb-10">
+                    <p class="font-sans text-lg md:text-xl text-muted max-w-lg leading-relaxed mb-10">
                         Практические курсы для тех, кто хочет освоить востребованное мастерство и начать зарабатывать своими руками
                     </p>
                     <div class="flex flex-col sm:flex-row gap-4">
-                        <a href="#napravleniya" class="inline-flex items-center justify-center px-8 py-4 bg-terracotta text-cream font-medium tracking-wide hover:bg-rust transition-colors">
+                        <a href="#napravleniya" class="inline-flex items-center justify-center px-8 py-4 bg-primary text-white font-medium tracking-wide hover:bg-primary-dark transition-colors">
                             Выбрать направление
                         </a>
-                        <a href="tel:077755722" class="inline-flex items-center justify-center px-8 py-4 border-2 border-warmbrown text-warmbrown font-medium tracking-wide hover:bg-warmbrown hover:text-cream transition-colors">
+                        <a href="tel:077755722" class="inline-flex items-center justify-center px-8 py-4 border-2 border-dark text-dark font-medium tracking-wide hover:bg-dark hover:text-white transition-colors">
                             Позвонить
                         </a>
                     </div>
                 </div>
                 <div class="lg:col-span-5 relative">
-                    <div class="aspect-[4/5] bg-peach rounded-2xl overflow-hidden relative">
-                        <div class="absolute inset-0 bg-gradient-to-br from-burnt/20 to-rust/30"></div>
+                    <div class="aspect-[4/5] bg-bgsky rounded-2xl overflow-hidden relative">
+                        <div class="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary-dark/30"></div>
                         <div class="absolute inset-0 flex items-center justify-center">
-                            <svg class="w-48 h-48 text-terracotta/30" fill="currentColor" viewBox="0 0 24 24">
+                            <svg class="w-48 h-48 text-primary/30" fill="currentColor" viewBox="0 0 24 24">
                                 <path d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z"/>
                             </svg>
                         </div>
                     </div>
-                    <div class="absolute -bottom-6 -left-6 w-32 h-32 bg-sand rounded-2xl -z-10"></div>
-                    <div class="absolute -top-4 -right-4 w-24 h-24 bg-burnt/20 rounded-full -z-10"></div>
+                    <div class="absolute -bottom-6 -left-6 w-32 h-32 bg-accent/20 rounded-2xl -z-10"></div>
+                    <div class="absolute -top-4 -right-4 w-24 h-24 bg-primary/20 rounded-full -z-10"></div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Directions -->
-    <section id="napravleniya" class="py-20 md:py-32 bg-ivory">
+    <section id="napravleniya" class="py-20 md:py-32 bg-bgsoft">
         <div class="max-w-7xl mx-auto px-6 md:px-12 lg:px-20">
             <div class="mb-16 md:mb-24">
-                <p class="font-sans text-sm tracking-[0.2em] uppercase text-terracotta mb-4">Направления обучения</p>
-                <h2 class="font-serif text-4xl md:text-5xl font-medium text-warmbrown">Выбери своё<br><em class="italic">призвание</em></h2>
+                <p class="font-sans text-sm tracking-[0.2em] uppercase text-primary mb-4">Направления обучения</p>
+                <h2 class="font-serif text-4xl md:text-5xl font-medium text-dark">Выбери своё<br><em class="italic text-accent-text">призвание</em></h2>
             </div>
 
             <div class="grid md:grid-cols-2 gap-8 md:gap-12">
 
                 <!-- Кулинария -->
-                <div class="group grid md:grid-cols-5 gap-6 p-8 bg-cream rounded-2xl hover:shadow-xl transition-shadow duration-300">
-                    <div class="md:col-span-2 aspect-square bg-gradient-to-br from-terracotta/20 to-burnt/30 rounded-xl flex items-center justify-center">
-                        <svg class="w-16 h-16 text-terracotta" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div class="group grid md:grid-cols-5 gap-6 p-8 bg-white rounded-2xl hover:shadow-xl transition-shadow duration-300">
+                    <div class="md:col-span-2 aspect-square bg-gradient-to-br from-primary/20 to-primary-dark/30 rounded-xl flex items-center justify-center">
+                        <svg class="w-16 h-16 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
                         </svg>
                     </div>
                     <div class="md:col-span-3 flex flex-col justify-center">
-                        <h3 class="font-serif text-2xl font-semibold text-warmbrown mb-3">Кулинария</h3>
-                        <p class="text-warmgray leading-relaxed mb-4">Поварское искусство, кондитерское мастерство, бармен и бариста</p>
-                        <a href="#" class="inline-flex items-center text-terracotta font-medium group-hover:gap-3 gap-2 transition-all">
+                        <span class="inline-block self-start bg-accent/15 text-accent-text text-xs font-medium px-3 py-1 rounded-full mb-3">Кулинария</span>
+                        <h3 class="font-serif text-2xl font-semibold text-dark mb-3">Поварское искусство</h3>
+                        <p class="text-muted leading-relaxed mb-4">Поварское искусство, кондитерское мастерство, бармен и бариста</p>
+                        <a href="#" class="inline-flex items-center text-primary font-medium group-hover:gap-3 gap-2 transition-all">
                             Узнать больше
                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
@@ -132,16 +138,17 @@
                 </div>
 
                 <!-- Красота -->
-                <div class="group grid md:grid-cols-5 gap-6 p-8 bg-cream rounded-2xl hover:shadow-xl transition-shadow duration-300">
-                    <div class="md:col-span-2 aspect-square bg-gradient-to-br from-burnt/20 to-rust/30 rounded-xl flex items-center justify-center">
-                        <svg class="w-16 h-16 text-burnt" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div class="group grid md:grid-cols-5 gap-6 p-8 bg-white rounded-2xl hover:shadow-xl transition-shadow duration-300">
+                    <div class="md:col-span-2 aspect-square bg-gradient-to-br from-accent/20 to-accent-text/30 rounded-xl flex items-center justify-center">
+                        <svg class="w-16 h-16 text-accent-text" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/>
                         </svg>
                     </div>
                     <div class="md:col-span-3 flex flex-col justify-center">
-                        <h3 class="font-serif text-2xl font-semibold text-warmbrown mb-3">Индустрия красоты</h3>
-                        <p class="text-warmgray leading-relaxed mb-4">Визаж, парикмахерское искусство, маникюр, косметология</p>
-                        <a href="#" class="inline-flex items-center text-terracotta font-medium group-hover:gap-3 gap-2 transition-all">
+                        <span class="inline-block self-start bg-accent/15 text-accent-text text-xs font-medium px-3 py-1 rounded-full mb-3">Красота</span>
+                        <h3 class="font-serif text-2xl font-semibold text-dark mb-3">Индустрия красоты</h3>
+                        <p class="text-muted leading-relaxed mb-4">Визаж, парикмахерское искусство, маникюр, косметология</p>
+                        <a href="#" class="inline-flex items-center text-primary font-medium group-hover:gap-3 gap-2 transition-all">
                             Узнать больше
                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
@@ -151,16 +158,17 @@
                 </div>
 
                 <!-- Творчество -->
-                <div class="group grid md:grid-cols-5 gap-6 p-8 bg-cream rounded-2xl hover:shadow-xl transition-shadow duration-300">
-                    <div class="md:col-span-2 aspect-square bg-gradient-to-br from-rust/20 to-warmbrown/30 rounded-xl flex items-center justify-center">
-                        <svg class="w-16 h-16 text-rust" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div class="group grid md:grid-cols-5 gap-6 p-8 bg-white rounded-2xl hover:shadow-xl transition-shadow duration-300">
+                    <div class="md:col-span-2 aspect-square bg-gradient-to-br from-primary-dark/20 to-dark/30 rounded-xl flex items-center justify-center">
+                        <svg class="w-16 h-16 text-primary-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/>
                         </svg>
                     </div>
                     <div class="md:col-span-3 flex flex-col justify-center">
-                        <h3 class="font-serif text-2xl font-semibold text-warmbrown mb-3">Творчество</h3>
-                        <p class="text-warmgray leading-relaxed mb-4">Фотография и дизайн для тех, кто видит мир по-своему</p>
-                        <a href="#" class="inline-flex items-center text-terracotta font-medium group-hover:gap-3 gap-2 transition-all">
+                        <span class="inline-block self-start bg-accent/15 text-accent-text text-xs font-medium px-3 py-1 rounded-full mb-3">Творчество</span>
+                        <h3 class="font-serif text-2xl font-semibold text-dark mb-3">Творческие профессии</h3>
+                        <p class="text-muted leading-relaxed mb-4">Фотография и дизайн для тех, кто видит мир по-своему</p>
+                        <a href="#" class="inline-flex items-center text-primary font-medium group-hover:gap-3 gap-2 transition-all">
                             Узнать больше
                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
@@ -170,16 +178,17 @@
                 </div>
 
                 <!-- Офис -->
-                <div class="group grid md:grid-cols-5 gap-6 p-8 bg-cream rounded-2xl hover:shadow-xl transition-shadow duration-300">
-                    <div class="md:col-span-2 aspect-square bg-gradient-to-br from-warmbrown/20 to-warmgray/30 rounded-xl flex items-center justify-center">
-                        <svg class="w-16 h-16 text-warmbrown" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div class="group grid md:grid-cols-5 gap-6 p-8 bg-white rounded-2xl hover:shadow-xl transition-shadow duration-300">
+                    <div class="md:col-span-2 aspect-square bg-gradient-to-br from-dark/20 to-muted/30 rounded-xl flex items-center justify-center">
+                        <svg class="w-16 h-16 text-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/>
                         </svg>
                     </div>
                     <div class="md:col-span-3 flex flex-col justify-center">
-                        <h3 class="font-serif text-2xl font-semibold text-warmbrown mb-3">Рабочие профессии</h3>
-                        <p class="text-warmgray leading-relaxed mb-4">Бухгалтерия, электрика, автослесарь — с гарантией трудоустройства</p>
-                        <a href="#" class="inline-flex items-center text-terracotta font-medium group-hover:gap-3 gap-2 transition-all">
+                        <span class="inline-block self-start bg-accent/15 text-accent-text text-xs font-medium px-3 py-1 rounded-full mb-3">Рабочие</span>
+                        <h3 class="font-serif text-2xl font-semibold text-dark mb-3">Рабочие профессии</h3>
+                        <p class="text-muted leading-relaxed mb-4">Бухгалтерия, электрика, автослесарь — с гарантией трудоустройства</p>
+                        <a href="#" class="inline-flex items-center text-primary font-medium group-hover:gap-3 gap-2 transition-all">
                             Узнать больше
                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
@@ -192,49 +201,61 @@
         </div>
     </section>
 
+    <!-- Pull-quote -->
+    <section class="py-16 md:py-24 bg-white">
+        <div class="max-w-4xl mx-auto px-6 md:px-12">
+            <blockquote class="border-l-4 border-accent pl-6 md:pl-10 py-4">
+                <p class="font-serif text-2xl md:text-3xl italic text-dark leading-relaxed">
+                    «Мы не просто учим — мы готовим к реальной работе. Наши выпускники получают практические навыки и уверенность в своих силах.»
+                </p>
+                <footer class="mt-4 text-muted text-sm">— Основатель учебного центра</footer>
+            </blockquote>
+        </div>
+    </section>
+
     <!-- Benefits -->
-    <section id="preimushestva" class="py-20 md:py-32 bg-warmbrown text-cream">
+    <section id="preimushestva" class="py-20 md:py-32 bg-dark text-white">
         <div class="max-w-7xl mx-auto px-6 md:px-12 lg:px-20">
             <div class="grid lg:grid-cols-2 gap-16 items-center">
                 <div>
-                    <p class="font-sans text-sm tracking-[0.2em] uppercase text-burnt mb-4">Почему мы</p>
-                    <h2 class="font-serif text-4xl md:text-5xl font-medium mb-8">Знания, которые<br><em class="italic">работают</em></h2>
-                    <p class="text-cream/80 text-lg leading-relaxed max-w-md">
+                    <p class="font-sans text-sm tracking-[0.2em] uppercase text-accent mb-4">Почему мы</p>
+                    <h2 class="font-serif text-4xl md:text-5xl font-medium mb-8">Знания, которые<br><em class="italic text-accent">работают</em></h2>
+                    <p class="text-white/80 text-lg leading-relaxed max-w-md">
                         Мы не просто учим — мы готовим к реальной работе. Наши выпускники получают практические навыки и уверенность в своих силах
                     </p>
                 </div>
                 <div class="grid gap-8">
                     <div class="flex gap-6">
-                        <div class="flex-shrink-0 w-16 h-16 bg-terracotta rounded-full flex items-center justify-center">
-                            <svg class="w-8 h-8 text-cream" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <div class="flex-shrink-0 w-16 h-16 bg-primary rounded-full flex items-center justify-center">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
                             </svg>
                         </div>
                         <div>
                             <h3 class="font-serif text-2xl font-semibold mb-2">Практика с первого дня</h3>
-                            <p class="text-cream/70">80% обучения — практические занятия на реальном оборудовании</p>
+                            <p class="text-white/70">80% обучения — практические занятия на реальном оборудовании</p>
                         </div>
                     </div>
                     <div class="flex gap-6">
-                        <div class="flex-shrink-0 w-16 h-16 bg-burnt rounded-full flex items-center justify-center">
-                            <svg class="w-8 h-8 text-cream" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <div class="flex-shrink-0 w-16 h-16 bg-accent rounded-full flex items-center justify-center">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/>
                             </svg>
                         </div>
                         <div>
                             <h3 class="font-serif text-2xl font-semibold mb-2">Опытные наставники</h3>
-                            <p class="text-cream/70">Преподаватели с реальным опытом работы в индустрии</p>
+                            <p class="text-white/70">Преподаватели с реальным опытом работы в индустрии</p>
                         </div>
                     </div>
                     <div class="flex gap-6">
-                        <div class="flex-shrink-0 w-16 h-16 bg-rust rounded-full flex items-center justify-center">
-                            <svg class="w-8 h-8 text-cream" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <div class="flex-shrink-0 w-16 h-16 bg-primary-dark rounded-full flex items-center justify-center">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/>
                             </svg>
                         </div>
                         <div>
                             <h3 class="font-serif text-2xl font-semibold mb-2">Государственный диплом</h3>
-                            <p class="text-cream/70">Официальный документ, признаваемый работодателями</p>
+                            <p class="text-white/70">Официальный документ, признаваемый работодателями</p>
                         </div>
                     </div>
                 </div>
@@ -243,44 +264,44 @@
     </section>
 
     <!-- Contact -->
-    <section id="kontakty" class="py-20 md:py-32 bg-cream">
+    <section id="kontakty" class="py-20 md:py-32 bg-bgsoft">
         <div class="max-w-7xl mx-auto px-6 md:px-12 lg:px-20">
             <div class="grid lg:grid-cols-2 gap-16">
                 <div>
-                    <p class="font-sans text-sm tracking-[0.2em] uppercase text-terracotta mb-4">Контакты</p>
-                    <h2 class="font-serif text-4xl md:text-5xl font-medium text-warmbrown mb-8">Запишись<br><em class="italic">на пробный</em><br>урок</h2>
-                    <p class="text-warmgray text-lg leading-relaxed mb-10">
+                    <p class="font-sans text-sm tracking-[0.2em] uppercase text-primary mb-4">Контакты</p>
+                    <h2 class="font-serif text-4xl md:text-5xl font-medium text-dark mb-8">Запишись<br><em class="italic text-accent-text">на пробный</em><br>урок</h2>
+                    <p class="text-muted text-lg leading-relaxed mb-10">
                         Приходи к нам в центр, познакомься с преподавателями и посмотри, как проходят занятия
                     </p>
                     <div class="space-y-6">
-                        <a href="tel:077755722" class="flex items-center gap-4 text-warmbrown hover:text-terracotta transition-colors">
-                            <div class="w-12 h-12 bg-peach rounded-full flex items-center justify-center">
-                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <a href="tel:077755722" class="flex items-center gap-4 text-dark hover:text-primary transition-colors">
+                            <div class="w-12 h-12 bg-primary/15 rounded-full flex items-center justify-center">
+                                <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
                                 </svg>
                             </div>
                             <span class="font-serif text-2xl">0 777 55722</span>
                         </a>
-                        <a href="tel:053344321" class="flex items-center gap-4 text-warmbrown hover:text-terracotta transition-colors">
-                            <div class="w-12 h-12 bg-peach rounded-full flex items-center justify-center">
-                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <a href="tel:053344321" class="flex items-center gap-4 text-dark hover:text-primary transition-colors">
+                            <div class="w-12 h-12 bg-primary/15 rounded-full flex items-center justify-center">
+                                <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
                                 </svg>
                             </div>
                             <span class="font-serif text-2xl">0 533 44321</span>
                         </a>
-                        <div class="flex items-center gap-4 text-warmgray">
-                            <div class="w-12 h-12 bg-peach rounded-full flex items-center justify-center">
-                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <div class="flex items-center gap-4 text-muted">
+                            <div class="w-12 h-12 bg-primary/15 rounded-full flex items-center justify-center">
+                                <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
                                 </svg>
                             </div>
                             <span class="text-lg">г. Тирасполь, ул. Юности, 10/3</span>
                         </div>
-                        <a href="mailto:professiyau@mail.ru" class="flex items-center gap-4 text-warmgray hover:text-terracotta transition-colors">
-                            <div class="w-12 h-12 bg-peach rounded-full flex items-center justify-center">
-                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <a href="mailto:professiyau@mail.ru" class="flex items-center gap-4 text-muted hover:text-primary transition-colors">
+                            <div class="w-12 h-12 bg-primary/15 rounded-full flex items-center justify-center">
+                                <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
                                 </svg>
                             </div>
@@ -288,16 +309,16 @@
                         </a>
                     </div>
                 </div>
-                <div class="bg-peach rounded-2xl p-8 md:p-12 flex items-center justify-center min-h-[300px]">
+                <div class="bg-white rounded-2xl p-8 md:p-12 flex items-center justify-center min-h-[300px] border border-bgsky">
                     <div class="text-center">
-                        <div class="w-20 h-20 bg-sand rounded-full flex items-center justify-center mx-auto mb-6">
-                            <svg class="w-10 h-10 text-warmbrown" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <div class="w-20 h-20 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <svg class="w-10 h-10 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
                             </svg>
                         </div>
-                        <p class="font-serif text-xl text-warmbrown mb-2">Часы работы</p>
-                        <p class="text-warmgray">Пн — Пт: 9:00 — 18:00</p>
-                        <p class="text-warmgray">Сб: 10:00 — 14:00</p>
+                        <p class="font-serif text-xl text-dark mb-2">Часы работы</p>
+                        <p class="text-muted">Пн — Пт: 9:00 — 18:00</p>
+                        <p class="text-muted">Сб: 10:00 — 14:00</p>
                     </div>
                 </div>
             </div>
@@ -305,10 +326,11 @@
     </section>
 
     <!-- Footer -->
-    <footer class="py-12 bg-warmbrown text-cream/60">
+    <footer class="py-12 bg-dark text-white/60">
         <div class="max-w-7xl mx-auto px-6 md:px-12 lg:px-20">
+            <hr class="border-t border-accent/40 mb-10">
             <div class="flex flex-col md:flex-row justify-between items-center gap-6">
-                <div class="font-serif text-2xl font-bold text-cream">Профессия</div>
+                <div class="font-serif text-2xl font-bold text-white">Профессия</div>
                 <p class="text-sm">© 2024 Учебный центр «Профессия». Все права защищены.</p>
             </div>
         </div>
@@ -342,6 +364,10 @@
                 <a href="colorful.html" class="flex items-center justify-between px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-indigo-600 transition">
                     <span class="font-medium">Colorful</span>
                     <span class="text-xs text-slate-400">Красочный</span>
+                </a>
+                <a href="blossom.html" class="flex items-center justify-between px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-indigo-600 transition">
+                    <span class="font-medium">Blossom</span>
+                    <span class="text-xs text-slate-400">Цветение сакуры</span>
                 </a>
                 <a href="minimal.html" class="flex items-center justify-between px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-indigo-600 transition">
                     <span class="font-medium">Minimal</span>

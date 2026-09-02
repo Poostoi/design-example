@@ -8,47 +8,70 @@
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.3/dist/cdn.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     fontFamily: {
-                        nunito: ['Nunito', 'sans-serif'],
+                        sans: ['Nunito', 'sans-serif'],
+                        serif: ['Playfair Display', 'Georgia', 'serif'],
                     },
+                    colors: {
+                        primary: '#E84B7A',
+                        'primary-soft': '#FF7AAA',
+                        'primary-dark': '#C73867',
+                        secondary: '#FF8C5A',
+                        'secondary-soft': '#FFB088',
+                        'secondary-dark': '#E66B3C',
+                        tertiary: '#A66FD4',
+                        'tertiary-soft': '#C8A2E0',
+                        'tertiary-dark': '#7B4FB8',
+                        accent: '#3A6FB0',
+                        'accent-soft': '#5A8FD4',
+                        'accent-dark': '#1A3A6B',
+                        mint: '#3FB89E',
+                        dark: '#1F1A2E',
+                        muted: '#6B5A75',
+                        'bg-soft': '#FFF5F0',
+                        'bg-warm': '#FFEEE0',
+                        'bg-lilac': '#F5EBFA',
+                        'bg-cool': '#E8F0FA'
+                    }
                 }
             }
         }
     </script>
     <style>
         [x-cloak] { display: none !important; }
-        .shadow-soft { box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
-        .shadow-soft-lg { box-shadow: 0 8px 30px rgba(0,0,0,0.1); }
+        .shadow-soft { box-shadow: 0 4px 20px rgba(232, 75, 122, 0.12); }
+        .shadow-soft-lg { box-shadow: 0 8px 30px rgba(232, 75, 122, 0.18); }
+        .shadow-coral { box-shadow: 0 8px 30px rgba(255, 140, 90, 0.25); }
     </style>
 </head>
-<body class="font-nunito bg-gray-50 text-gray-800">
+<body class="font-sans bg-gray-50 text-dark">
 
     <!-- Header -->
-    <header class="bg-white/90 backdrop-blur-md sticky top-0 z-50 shadow-soft">
+    <header class="bg-white/95 backdrop-blur-md sticky top-0 z-50 shadow-soft">
         <div class="max-w-7xl mx-auto px-4 py-4">
             <div class="flex items-center justify-between">
                 <a href="#" class="flex items-center gap-3 group">
-                    <div class="w-12 h-12 bg-gradient-to-br from-orange-400 to-pink-400 rounded-2xl flex items-center justify-center shadow-soft group-hover:scale-105 transition-transform">
+                    <div class="w-12 h-12 bg-gradient-to-br from-primary to-tertiary rounded-2xl flex items-center justify-center shadow-soft group-hover:scale-110 group-hover:shadow-coral transition-all">
                         <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
                         </svg>
                     </div>
                     <div>
-                        <span class="text-2xl font-extrabold bg-gradient-to-r from-orange-500 via-pink-500 to-violet-500 bg-clip-text text-transparent">Профессия</span>
-                        <p class="text-xs text-gray-500 -mt-1">Учебный центр</p>
+                        <span class="text-2xl font-extrabold bg-gradient-to-r from-primary via-secondary to-tertiary bg-clip-text text-transparent">Профессия</span>
+                        <p class="text-xs text-muted -mt-1">Учебный центр</p>
                     </div>
                 </a>
                 <nav class="hidden md:flex items-center gap-8">
-                    <a href="#categories" class="text-gray-600 hover:text-orange-600 font-semibold transition-colors">Направления</a>
-                    <a href="#about" class="text-gray-600 hover:text-orange-600 font-semibold transition-colors">О нас</a>
-                    <a href="#contacts" class="text-gray-600 hover:text-orange-600 font-semibold transition-colors">Контакты</a>
+                    <a href="#categories" class="text-dark hover:text-primary font-semibold transition-colors">Направления</a>
+                    <a href="#about" class="text-dark hover:text-primary font-semibold transition-colors">О нас</a>
+                    <a href="#contacts" class="text-dark hover:text-primary font-semibold transition-colors">Контакты</a>
                 </nav>
-                <a href="tel:077755722" class="flex items-center gap-2 bg-gradient-to-r from-orange-500 to-pink-500 text-white px-5 py-2.5 rounded-2xl font-bold shadow-soft hover:shadow-soft-lg hover:scale-105 transition-all">
+                <a href="tel:077755722" class="flex items-center gap-2 bg-gradient-to-r from-primary to-secondary text-white px-5 py-2.5 rounded-2xl font-bold shadow-soft hover:shadow-coral hover:scale-105 transition-all">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
                     0777 55722
                 </a>
@@ -57,27 +80,32 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="relative overflow-hidden bg-gradient-to-b from-orange-50 via-pink-50 to-violet-50 py-16 md:py-24">
+    <section class="relative overflow-hidden bg-gradient-to-br from-bg-soft via-bg-warm to-bg-lilac py-24 md:py-36">
+        <!-- Сакура: крупные мягкие блобы -->
+        <div class="absolute top-10 left-10 w-[28rem] h-[28rem] bg-primary/15 rounded-full blur-3xl"></div>
+        <div class="absolute top-1/3 right-0 w-96 h-96 bg-secondary/15 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-10 left-1/3 w-[26rem] h-[26rem] bg-primary-soft/20 rounded-full blur-3xl"></div>
+
         <div class="max-w-7xl mx-auto px-4 relative">
             <div class="text-center max-w-3xl mx-auto">
-                <div class="inline-flex items-center gap-2 bg-white/80 backdrop-blur px-4 py-2 rounded-full shadow-soft mb-6">
-                    <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
-                    <span class="text-sm font-semibold text-gray-600">Набор на новый учебный год открыт</span>
+                <div class="inline-flex items-center gap-2 bg-white/90 backdrop-blur px-4 py-2 rounded-full shadow-soft mb-8">
+                    <span class="w-2 h-2 bg-primary rounded-full animate-pulse"></span>
+                    <span class="text-sm font-semibold text-dark">Набор на новый учебный год открыт</span>
                 </div>
-                <h1 class="text-4xl md:text-6xl font-extrabold text-gray-800 mb-6">
+                <h1 class="font-serif text-5xl md:text-7xl font-bold text-dark mb-6 leading-tight">
                     Найди свою
-                    <span class="bg-gradient-to-r from-orange-500 via-pink-500 to-violet-500 bg-clip-text text-transparent">профессию</span>
+                    <span class="bg-gradient-to-r from-primary via-secondary to-tertiary bg-clip-text text-transparent italic">профессию</span>
                 </h1>
-                <p class="text-lg md:text-xl text-gray-600 mb-10 leading-relaxed">
+                <p class="text-lg md:text-xl text-muted mb-10 leading-relaxed">
                     Кулинария, косметология, творчество, офисные профессии —
                     выбери направление, которое подходит именно тебе
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="#categories" class="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-orange-500 to-pink-500 text-white px-8 py-4 rounded-2xl font-bold text-lg shadow-soft-lg hover:scale-105 transition-all">
+                    <a href="#categories" class="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-primary to-tertiary text-white px-8 py-4 rounded-3xl font-bold text-lg shadow-coral hover:scale-105 transition-all">
                         Выбрать направление
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </a>
-                    <a href="#contacts" class="inline-flex items-center justify-center gap-2 bg-white text-gray-700 px-8 py-4 rounded-2xl font-bold text-lg shadow-soft hover:shadow-soft-lg hover:scale-105 transition-all border-2 border-gray-100">
+                    <a href="#contacts" class="inline-flex items-center justify-center gap-2 bg-white text-dark px-8 py-4 rounded-3xl font-bold text-lg shadow-soft hover:shadow-coral hover:scale-105 transition-all border-2 border-secondary-soft">
                         Записаться на курс
                     </a>
                 </div>
@@ -89,31 +117,31 @@
     <section id="categories" class="py-16 md:py-24">
         <div class="max-w-7xl mx-auto px-4">
             <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-extrabold text-gray-800 mb-4">Наши направления</h2>
-                <p class="text-gray-500 text-lg">Выбери категорию и узнай больше о курсах</p>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-dark mb-4">Наши направления</h2>
+                <p class="text-muted text-lg">Выбери категорию и узнай больше о курсах</p>
             </div>
 
             <div x-data="{ activeTab: null }" class="space-y-6">
 
                 <!-- Кулинария -->
-                <div class="bg-orange-50 rounded-3xl p-2 md:p-3 shadow-soft hover:shadow-soft-lg transition-shadow">
+                <div class="bg-gradient-to-r from-secondary-soft/40 to-bg-warm rounded-[2rem] p-2 md:p-3 shadow-soft hover:shadow-coral transition-shadow border border-secondary-soft/50">
                     <button @click="activeTab = activeTab === 'cooking' ? null : 'cooking'"
                             class="w-full flex items-center justify-between p-6 md:p-8 group">
                         <div class="flex items-center gap-5">
-                            <div class="w-16 h-16 bg-gradient-to-br from-orange-400 to-orange-500 rounded-2xl flex items-center justify-center shadow-soft group-hover:scale-110 transition-transform">
+                            <div class="w-16 h-16 bg-gradient-to-br from-secondary to-secondary-dark rounded-3xl flex items-center justify-center shadow-coral group-hover:scale-110 transition-transform">
                                 <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M3 11l18-5v12L3 14v-3z M11.6 16.8a3 3 0 11-5.8-1.6" />
                                 </svg>
                             </div>
                             <div class="text-left">
-                                <h3 class="text-2xl font-bold text-orange-700">Кулинария</h3>
-                                <p class="text-orange-600/80 font-medium">Поварское искусство и кондитерское дело</p>
+                                <h3 class="text-2xl font-bold text-secondary-dark">Кулинария</h3>
+                                <p class="text-secondary-dark/80 font-medium">Поварское искусство и кондитерское дело</p>
                             </div>
                         </div>
                         <div class="flex items-center gap-3">
-                            <span class="hidden md:block text-orange-600 font-semibold bg-orange-100 px-3 py-1 rounded-full text-sm">4 курса</span>
+                            <span class="hidden md:block text-primary-dark font-semibold bg-primary-soft/30 px-3 py-1 rounded-full text-sm">4 курса</span>
                             <svg :class="activeTab === 'cooking' ? 'rotate-180' : ''"
-                                 class="w-6 h-6 text-orange-500 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                 class="w-6 h-6 text-secondary-dark transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                             </svg>
                         </div>
@@ -123,43 +151,43 @@
                          x-transition:enter-start="opacity-0 transform -y-4"
                          x-transition:enter-end="opacity-100 transform y-0"
                          class="px-6 md:px-8 pb-6 md:pb-8 grid grid-cols-1 md:grid-cols-3 gap-4">
-                        <a href="#" class="bg-white rounded-2xl p-5 shadow-soft hover:shadow-soft-lg transition-all border-2 border-transparent hover:border-orange-200">
-                            <h4 class="font-bold text-gray-800 mb-1">Повар</h4>
-                            <p class="text-sm text-gray-500">Ресторанная кухня, салаты, горячие блюда</p>
-                            <div class="mt-3 text-orange-600 font-semibold text-sm">от 28 000 ₽ →</div>
+                        <a href="#" class="bg-white rounded-2xl p-5 shadow-soft hover:shadow-coral transition-all border-2 border-transparent hover:border-secondary">
+                            <h4 class="font-bold text-dark mb-1">Повар</h4>
+                            <p class="text-sm text-muted">Ресторанная кухня, салаты, горячие блюда</p>
+                            <div class="mt-3 text-secondary-dark font-bold text-sm">от 28 000 ₽ →</div>
                         </a>
-                        <a href="#" class="bg-white rounded-2xl p-5 shadow-soft hover:shadow-soft-lg transition-all border-2 border-transparent hover:border-orange-200">
-                            <h4 class="font-bold text-gray-800 mb-1">Кондитер</h4>
-                            <p class="text-sm text-gray-500">Торты, десерты, выпечка, украшение</p>
-                            <div class="mt-3 text-orange-600 font-semibold text-sm">от 32 000 ₽ →</div>
+                        <a href="#" class="bg-white rounded-2xl p-5 shadow-soft hover:shadow-coral transition-all border-2 border-transparent hover:border-secondary">
+                            <h4 class="font-bold text-dark mb-1">Кондитер</h4>
+                            <p class="text-sm text-muted">Торты, десерты, выпечка, украшение</p>
+                            <div class="mt-3 text-secondary-dark font-bold text-sm">от 32 000 ₽ →</div>
                         </a>
-                        <a href="#" class="bg-white rounded-2xl p-5 shadow-soft hover:shadow-soft-lg transition-all border-2 border-transparent hover:border-orange-200">
-                            <h4 class="font-bold text-gray-800 mb-1">Бариста</h4>
-                            <p class="text-sm text-gray-500">Кофе, альтернативные методы заваривания</p>
-                            <div class="mt-3 text-orange-600 font-semibold text-sm">от 15 000 ₽ →</div>
+                        <a href="#" class="bg-white rounded-2xl p-5 shadow-soft hover:shadow-coral transition-all border-2 border-transparent hover:border-secondary">
+                            <h4 class="font-bold text-dark mb-1">Бариста</h4>
+                            <p class="text-sm text-muted">Кофе, альтернативные методы заваривания</p>
+                            <div class="mt-3 text-secondary-dark font-bold text-sm">от 15 000 ₽ →</div>
                         </a>
                     </div>
                 </div>
 
                 <!-- Красота -->
-                <div class="bg-pink-50 rounded-3xl p-2 md:p-3 shadow-soft hover:shadow-soft-lg transition-shadow">
+                <div class="bg-gradient-to-r from-primary-soft/30 to-bg-soft rounded-[2rem] p-2 md:p-3 shadow-soft hover:shadow-coral transition-shadow border border-primary-soft/50">
                     <button @click="activeTab = activeTab === 'beauty' ? null : 'beauty'"
                             class="w-full flex items-center justify-between p-6 md:p-8 group">
                         <div class="flex items-center gap-5">
-                            <div class="w-16 h-16 bg-gradient-to-br from-pink-400 to-rose-500 rounded-2xl flex items-center justify-center shadow-soft group-hover:scale-110 transition-transform">
+                            <div class="w-16 h-16 bg-gradient-to-br from-primary to-primary-dark rounded-3xl flex items-center justify-center shadow-coral group-hover:scale-110 transition-transform">
                                 <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M9.5 14.5L3.5 20.5M14.5 9.5l5 5M16 3l3 3-9 9-4 1 1-4 9-9z" />
                                 </svg>
                             </div>
                             <div class="text-left">
-                                <h3 class="text-2xl font-bold text-pink-700">Индустрия красоты</h3>
-                                <p class="text-pink-600/80 font-medium">Косметология, макияж, уход за собой</p>
+                                <h3 class="text-2xl font-bold text-primary-dark">Индустрия красоты</h3>
+                                <p class="text-primary-dark/80 font-medium">Косметология, макияж, уход за собой</p>
                             </div>
                         </div>
                         <div class="flex items-center gap-3">
-                            <span class="hidden md:block text-pink-600 font-semibold bg-pink-100 px-3 py-1 rounded-full text-sm">6 курсов</span>
+                            <span class="hidden md:block text-primary-dark font-semibold bg-primary-soft/30 px-3 py-1 rounded-full text-sm">6 курсов</span>
                             <svg :class="activeTab === 'beauty' ? 'rotate-180' : ''"
-                                 class="w-6 h-6 text-pink-500 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                 class="w-6 h-6 text-primary-dark transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                             </svg>
                         </div>
@@ -169,43 +197,43 @@
                          x-transition:enter-start="opacity-0 transform -y-4"
                          x-transition:enter-end="opacity-100 transform y-0"
                          class="px-6 md:px-8 pb-6 md:pb-8 grid grid-cols-1 md:grid-cols-3 gap-4">
-                        <a href="#" class="bg-white rounded-2xl p-5 shadow-soft hover:shadow-soft-lg transition-all border-2 border-transparent hover:border-pink-200">
-                            <h4 class="font-bold text-gray-800 mb-1">Парикмахер</h4>
-                            <p class="text-sm text-gray-500">Стрижки, окрашивание, укладки</p>
-                            <div class="mt-3 text-pink-600 font-semibold text-sm">от 36 000 ₽ →</div>
+                        <a href="#" class="bg-white rounded-2xl p-5 shadow-soft hover:shadow-coral transition-all border-2 border-transparent hover:border-primary">
+                            <h4 class="font-bold text-dark mb-1">Парикмахер</h4>
+                            <p class="text-sm text-muted">Стрижки, окрашивание, укладки</p>
+                            <div class="mt-3 text-primary-dark font-bold text-sm">от 36 000 ₽ →</div>
                         </a>
-                        <a href="#" class="bg-white rounded-2xl p-5 shadow-soft hover:shadow-soft-lg transition-all border-2 border-transparent hover:border-pink-200">
-                            <h4 class="font-bold text-gray-800 mb-1">Мастер маникюра</h4>
-                            <p class="text-sm text-gray-500">Ногтевой сервис, наращивание, дизайн</p>
-                            <div class="mt-3 text-pink-600 font-semibold text-sm">от 22 000 ₽ →</div>
+                        <a href="#" class="bg-white rounded-2xl p-5 shadow-soft hover:shadow-coral transition-all border-2 border-transparent hover:border-primary">
+                            <h4 class="font-bold text-dark mb-1">Мастер маникюра</h4>
+                            <p class="text-sm text-muted">Ногтевой сервис, наращивание, дизайн</p>
+                            <div class="mt-3 text-primary-dark font-bold text-sm">от 22 000 ₽ →</div>
                         </a>
-                        <a href="#" class="bg-white rounded-2xl p-5 shadow-soft hover:shadow-soft-lg transition-all border-2 border-transparent hover:border-pink-200">
-                            <h4 class="font-bold text-gray-800 mb-1">Визажист</h4>
-                            <p class="text-sm text-gray-500">Макияж для любых случаев, образы</p>
-                            <div class="mt-3 text-pink-600 font-semibold text-sm">от 30 000 ₽ →</div>
+                        <a href="#" class="bg-white rounded-2xl p-5 shadow-soft hover:shadow-coral transition-all border-2 border-transparent hover:border-primary">
+                            <h4 class="font-bold text-dark mb-1">Визажист</h4>
+                            <p class="text-sm text-muted">Макияж для любых случаев, образы</p>
+                            <div class="mt-3 text-primary-dark font-bold text-sm">от 30 000 ₽ →</div>
                         </a>
                     </div>
                 </div>
 
                 <!-- Творчество -->
-                <div class="bg-violet-50 rounded-3xl p-2 md:p-3 shadow-soft hover:shadow-soft-lg transition-shadow">
+                <div class="bg-gradient-to-r from-tertiary-soft/40 to-bg-lilac rounded-[2rem] p-2 md:p-3 shadow-soft hover:shadow-coral transition-shadow border border-tertiary-soft/50">
                     <button @click="activeTab = activeTab === 'creative' ? null : 'creative'"
                             class="w-full flex items-center justify-between p-6 md:p-8 group">
                         <div class="flex items-center gap-5">
-                            <div class="w-16 h-16 bg-gradient-to-br from-violet-400 to-purple-500 rounded-2xl flex items-center justify-center shadow-soft group-hover:scale-110 transition-transform">
+                            <div class="w-16 h-16 bg-gradient-to-br from-tertiary to-tertiary-dark rounded-3xl flex items-center justify-center shadow-coral group-hover:scale-110 transition-transform">
                                 <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z M15 13a3 3 0 11-6 0 3 3 0 016 0z" />
                                 </svg>
                             </div>
                             <div class="text-left">
-                                <h3 class="text-2xl font-bold text-violet-700">Творчество</h3>
-                                <p class="text-violet-600/80 font-medium">Дизайн, фотография, рукоделие</p>
+                                <h3 class="text-2xl font-bold text-tertiary-dark">Творчество</h3>
+                                <p class="text-tertiary-dark/80 font-medium">Дизайн, фотография, рукоделие</p>
                             </div>
                         </div>
                         <div class="flex items-center gap-3">
-                            <span class="hidden md:block text-violet-600 font-semibold bg-violet-100 px-3 py-1 rounded-full text-sm">2 курса</span>
+                            <span class="hidden md:block text-tertiary-dark font-semibold bg-tertiary-soft/30 px-3 py-1 rounded-full text-sm">2 курса</span>
                             <svg :class="activeTab === 'creative' ? 'rotate-180' : ''"
-                                 class="w-6 h-6 text-violet-500 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                 class="w-6 h-6 text-tertiary-dark transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                             </svg>
                         </div>
@@ -215,38 +243,38 @@
                          x-transition:enter-start="opacity-0 transform -y-4"
                          x-transition:enter-end="opacity-100 transform y-0"
                          class="px-6 md:px-8 pb-6 md:pb-8 grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <a href="#" class="bg-white rounded-2xl p-5 shadow-soft hover:shadow-soft-lg transition-all border-2 border-transparent hover:border-violet-200">
-                            <h4 class="font-bold text-gray-800 mb-1">Фотограф</h4>
-                            <p class="text-sm text-gray-500">Портрет, предметная, обработка фото</p>
-                            <div class="mt-3 text-violet-600 font-semibold text-sm">от 28 000 ₽ →</div>
+                        <a href="#" class="bg-white rounded-2xl p-5 shadow-soft hover:shadow-coral transition-all border-2 border-transparent hover:border-tertiary">
+                            <h4 class="font-bold text-dark mb-1">Фотограф</h4>
+                            <p class="text-sm text-muted">Портрет, предметная, обработка фото</p>
+                            <div class="mt-3 text-tertiary-dark font-bold text-sm">от 28 000 ₽ →</div>
                         </a>
-                        <a href="#" class="bg-white rounded-2xl p-5 shadow-soft hover:shadow-soft-lg transition-all border-2 border-transparent hover:border-violet-200">
-                            <h4 class="font-bold text-gray-800 mb-1">Дизайнер</h4>
-                            <p class="text-sm text-gray-500">Графический дизайн, Figma, Photoshop</p>
-                            <div class="mt-3 text-violet-600 font-semibold text-sm">от 40 000 ₽ →</div>
+                        <a href="#" class="bg-white rounded-2xl p-5 shadow-soft hover:shadow-coral transition-all border-2 border-transparent hover:border-tertiary">
+                            <h4 class="font-bold text-dark mb-1">Дизайнер</h4>
+                            <p class="text-sm text-muted">Графический дизайн, Figma, Photoshop</p>
+                            <div class="mt-3 text-tertiary-dark font-bold text-sm">от 40 000 ₽ →</div>
                         </a>
                     </div>
                 </div>
 
-                <!-- Офис -->
-                <div class="bg-blue-50 rounded-3xl p-2 md:p-3 shadow-soft hover:shadow-soft-lg transition-shadow">
+                <!-- Рабочие -->
+                <div class="bg-gradient-to-r from-accent-soft/30 to-bg-cool rounded-[2rem] p-2 md:p-3 shadow-soft hover:shadow-coral transition-shadow border border-accent-soft/50">
                     <button @click="activeTab = activeTab === 'office' ? null : 'office'"
                             class="w-full flex items-center justify-between p-6 md:p-8 group">
                         <div class="flex items-center gap-5">
-                            <div class="w-16 h-16 bg-gradient-to-br from-blue-400 to-cyan-500 rounded-2xl flex items-center justify-center shadow-soft group-hover:scale-110 transition-transform">
+                            <div class="w-16 h-16 bg-gradient-to-br from-accent to-accent-dark rounded-3xl flex items-center justify-center shadow-coral group-hover:scale-110 transition-transform">
                                 <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                                 </svg>
                             </div>
                             <div class="text-left">
-                                <h3 class="text-2xl font-bold text-blue-700">Рабочие профессии</h3>
-                                <p class="text-blue-600/80 font-medium">Бухгалтерия, электрика, автослесарь</p>
+                                <h3 class="text-2xl font-bold text-accent-dark">Рабочие профессии</h3>
+                                <p class="text-accent/90 font-medium">Бухгалтерия, электрика, автослесарь</p>
                             </div>
                         </div>
                         <div class="flex items-center gap-3">
-                            <span class="hidden md:block text-blue-600 font-semibold bg-blue-100 px-3 py-1 rounded-full text-sm">3 курса</span>
+                            <span class="hidden md:block text-accent-dark font-semibold bg-accent-soft/30 px-3 py-1 rounded-full text-sm">3 курса</span>
                             <svg :class="activeTab === 'office' ? 'rotate-180' : ''"
-                                 class="w-6 h-6 text-blue-500 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                 class="w-6 h-6 text-accent-dark transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                             </svg>
                         </div>
@@ -256,20 +284,20 @@
                          x-transition:enter-start="opacity-0 transform -y-4"
                          x-transition:enter-end="opacity-100 transform y-0"
                          class="px-6 md:px-8 pb-6 md:pb-8 grid grid-cols-1 md:grid-cols-3 gap-4">
-                        <a href="#" class="bg-white rounded-2xl p-5 shadow-soft hover:shadow-soft-lg transition-all border-2 border-transparent hover:border-blue-200">
-                            <h4 class="font-bold text-gray-800 mb-1">Бухгалтер</h4>
-                            <p class="text-sm text-gray-500">Учёт, отчётность, 1С, налоги</p>
-                            <div class="mt-3 text-blue-600 font-semibold text-sm">от 35 000 ₽ →</div>
+                        <a href="#" class="bg-white rounded-2xl p-5 shadow-soft hover:shadow-coral transition-all border-2 border-transparent hover:border-accent">
+                            <h4 class="font-bold text-dark mb-1">Бухгалтер</h4>
+                            <p class="text-sm text-muted">Учёт, отчётность, 1С, налоги</p>
+                            <div class="mt-3 text-accent-dark font-bold text-sm">от 35 000 ₽ →</div>
                         </a>
-                        <a href="#" class="bg-white rounded-2xl p-5 shadow-soft hover:shadow-soft-lg transition-all border-2 border-transparent hover:border-blue-200">
-                            <h4 class="font-bold text-gray-800 mb-1">Электрик</h4>
-                            <p class="text-sm text-gray-500">Электромонтаж, безопасность, практика</p>
-                            <div class="mt-3 text-blue-600 font-semibold text-sm">от 25 000 ₽ →</div>
+                        <a href="#" class="bg-white rounded-2xl p-5 shadow-soft hover:shadow-coral transition-all border-2 border-transparent hover:border-accent">
+                            <h4 class="font-bold text-dark mb-1">Электрик</h4>
+                            <p class="text-sm text-muted">Электромонтаж, безопасность, практика</p>
+                            <div class="mt-3 text-accent-dark font-bold text-sm">от 25 000 ₽ →</div>
                         </a>
-                        <a href="#" class="bg-white rounded-2xl p-5 shadow-soft hover:shadow-soft-lg transition-all border-2 border-transparent hover:border-blue-200">
-                            <h4 class="font-bold text-gray-800 mb-1">Шиномонтажник</h4>
-                            <p class="text-sm text-gray-500">Колёса, балансировка, ремонт</p>
-                            <div class="mt-3 text-blue-600 font-semibold text-sm">от 20 000 ₽ →</div>
+                        <a href="#" class="bg-white rounded-2xl p-5 shadow-soft hover:shadow-coral transition-all border-2 border-transparent hover:border-accent">
+                            <h4 class="font-bold text-dark mb-1">Шиномонтажник</h4>
+                            <p class="text-sm text-muted">Колёса, балансировка, ремонт</p>
+                            <div class="mt-3 text-accent-dark font-bold text-sm">от 20 000 ₽ →</div>
                         </a>
                     </div>
                 </div>
@@ -278,92 +306,99 @@
         </div>
     </section>
 
-    <!-- Trust Section -->
-    <section id="about" class="py-16 bg-gradient-to-b from-gray-50 to-white">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-extrabold text-gray-800 mb-4">Почему выбирают нас</h2>
-                <p class="text-gray-500 text-lg">Более 15 лет мы помогаем людям освоить востребованные профессии</p>
+    <!-- Trust Section (СИНИЙ тёмный фон для контраста!) -->
+    <section id="about" class="py-20 md:py-28 bg-gradient-to-br from-accent-dark via-accent to-accent-soft text-white relative overflow-hidden">
+        <div class="absolute inset-0 opacity-20">
+            <div class="absolute top-0 right-0 w-96 h-96 bg-primary rounded-full blur-3xl"></div>
+            <div class="absolute bottom-0 left-0 w-80 h-80 bg-tertiary rounded-full blur-3xl"></div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 relative">
+            <div class="text-center mb-14">
+                <h2 class="text-3xl md:text-4xl font-extrabold mb-4">Почему выбирают нас</h2>
+                <p class="text-white/80 text-lg">Более 15 лет мы помогаем людям освоить востребованные профессии</p>
             </div>
             <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-                <div class="bg-white rounded-3xl p-6 text-center shadow-soft hover:shadow-soft-lg hover:-translate-y-1 transition-all">
-                    <div class="text-4xl font-extrabold text-orange-500 mb-1">2500+</div>
-                    <div class="text-gray-500 font-medium">выпускников</div>
+                <div class="bg-white/10 backdrop-blur-md rounded-3xl p-6 text-center border border-white/20 hover:bg-white/20 hover:-translate-y-1 transition-all">
+                    <div class="text-5xl font-extrabold text-primary-soft mb-1">2500+</div>
+                    <div class="text-white/80 font-medium">выпускников</div>
                 </div>
-                <div class="bg-white rounded-3xl p-6 text-center shadow-soft hover:shadow-soft-lg hover:-translate-y-1 transition-all">
-                    <div class="text-4xl font-extrabold text-pink-500 mb-1">12</div>
-                    <div class="text-gray-500 font-medium">направлений</div>
+                <div class="bg-white/10 backdrop-blur-md rounded-3xl p-6 text-center border border-white/20 hover:bg-white/20 hover:-translate-y-1 transition-all">
+                    <div class="text-5xl font-extrabold text-white mb-1">12</div>
+                    <div class="text-white/80 font-medium">направлений</div>
                 </div>
-                <div class="bg-white rounded-3xl p-6 text-center shadow-soft hover:shadow-soft-lg hover:-translate-y-1 transition-all">
-                    <div class="text-4xl font-extrabold text-violet-500 mb-1">25</div>
-                    <div class="text-gray-500 font-medium">преподавателей</div>
+                <div class="bg-white/10 backdrop-blur-md rounded-3xl p-6 text-center border border-white/20 hover:bg-white/20 hover:-translate-y-1 transition-all">
+                    <div class="text-5xl font-extrabold text-tertiary-soft mb-1">25</div>
+                    <div class="text-white/80 font-medium">преподавателей</div>
                 </div>
-                <div class="bg-white rounded-3xl p-6 text-center shadow-soft hover:shadow-soft-lg hover:-translate-y-1 transition-all">
-                    <div class="text-4xl font-extrabold text-blue-500 mb-1">85%</div>
-                    <div class="text-gray-500 font-medium">трудоустройство</div>
+                <div class="bg-white/10 backdrop-blur-md rounded-3xl p-6 text-center border border-white/20 hover:bg-white/20 hover:-translate-y-1 transition-all">
+                    <div class="text-5xl font-extrabold text-mint mb-1">85%</div>
+                    <div class="text-white/80 font-medium">трудоустройство</div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contacts" class="py-16 md:py-24 bg-gradient-to-b from-orange-50 via-pink-50 to-violet-50">
-        <div class="max-w-7xl mx-auto px-4">
+    <section id="contacts" class="py-16 md:py-24 bg-gradient-to-br from-bg-soft via-bg-warm to-bg-lilac relative overflow-hidden">
+        <div class="absolute top-20 right-10 w-72 h-72 bg-tertiary/20 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-20 left-10 w-96 h-96 bg-primary/15 rounded-full blur-3xl"></div>
+
+        <div class="max-w-7xl mx-auto px-4 relative">
             <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-extrabold text-gray-800 mb-4">Запишитесь на курс</h2>
-                <p class="text-gray-500 text-lg">Свяжитесь с нами удобным способом</p>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-dark mb-4">Запишитесь на курс</h2>
+                <p class="text-muted text-lg">Свяжитесь с нами удобным способом</p>
             </div>
             <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                <div class="bg-white rounded-3xl p-8 shadow-soft-lg">
-                    <h3 class="text-xl font-bold text-gray-800 mb-6">Контактная информация</h3>
+                <div class="bg-white rounded-3xl p-8 shadow-coral border border-bg-warm">
+                    <h3 class="text-xl font-bold text-dark mb-6">Контактная информация</h3>
                     <div class="space-y-4">
-                        <a href="tel:077755722" class="flex items-center gap-4 p-4 bg-orange-50 rounded-2xl hover:bg-orange-100 transition-colors">
-                            <div class="w-10 h-10 bg-gradient-to-br from-orange-400 to-orange-500 rounded-xl flex items-center justify-center shadow-soft flex-shrink-0">
+                        <a href="tel:077755722" class="flex items-center gap-4 p-4 bg-bg-warm rounded-2xl hover:bg-secondary-soft/40 transition-colors group">
+                            <div class="w-10 h-10 bg-gradient-to-br from-primary to-primary-dark rounded-xl flex items-center justify-center shadow-soft group-hover:scale-110 transition-transform flex-shrink-0">
                                 <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
                             </div>
                             <div>
-                                <div class="text-sm text-gray-500">Телефон</div>
-                                <div class="text-lg font-bold text-gray-800">0 777 55722</div>
+                                <div class="text-sm text-muted">Телефон</div>
+                                <div class="text-lg font-bold text-dark">0 777 55722</div>
                             </div>
                         </a>
-                        <a href="tel:053344321" class="flex items-center gap-4 p-4 bg-pink-50 rounded-2xl hover:bg-pink-100 transition-colors">
-                            <div class="w-10 h-10 bg-gradient-to-br from-pink-400 to-rose-500 rounded-xl flex items-center justify-center shadow-soft flex-shrink-0">
+                        <a href="tel:053344321" class="flex items-center gap-4 p-4 bg-bg-soft rounded-2xl hover:bg-primary-soft/40 transition-colors group">
+                            <div class="w-10 h-10 bg-gradient-to-br from-secondary to-secondary-dark rounded-xl flex items-center justify-center shadow-soft group-hover:scale-110 transition-transform flex-shrink-0">
                                 <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
                             </div>
                             <div>
-                                <div class="text-sm text-gray-500">Телефон</div>
-                                <div class="text-lg font-bold text-gray-800">0 533 44321</div>
+                                <div class="text-sm text-muted">Телефон</div>
+                                <div class="text-lg font-bold text-dark">0 533 44321</div>
                             </div>
                         </a>
-                        <div class="flex items-center gap-4 p-4 bg-violet-50 rounded-2xl">
-                            <div class="w-10 h-10 bg-gradient-to-br from-violet-400 to-purple-500 rounded-xl flex items-center justify-center shadow-soft flex-shrink-0">
+                        <div class="flex items-center gap-4 p-4 bg-bg-lilac rounded-2xl">
+                            <div class="w-10 h-10 bg-gradient-to-br from-tertiary to-tertiary-dark rounded-xl flex items-center justify-center shadow-soft flex-shrink-0">
                                 <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
                             </div>
                             <div>
-                                <div class="text-sm text-gray-500">Адрес</div>
-                                <div class="text-base font-bold text-gray-800">г. Тирасполь, ул. Юности, 10/3</div>
+                                <div class="text-sm text-muted">Адрес</div>
+                                <div class="text-base font-bold text-dark">г. Тирасполь, ул. Юности, 10/3</div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="bg-white rounded-3xl p-8 shadow-soft-lg">
-                    <h3 class="text-xl font-bold text-gray-800 mb-6">Оставьте заявку</h3>
+                <div class="bg-white rounded-3xl p-8 shadow-coral border border-bg-warm">
+                    <h3 class="text-xl font-bold text-dark mb-6">Оставьте заявку</h3>
                     <form class="space-y-4">
                         <div>
-                            <label class="block text-sm font-semibold text-gray-600 mb-2">Ваше имя</label>
+                            <label class="block text-sm font-semibold text-muted mb-2">Ваше имя</label>
                             <input type="text" required
-                                   class="w-full px-4 py-3 rounded-xl border-2 border-gray-100 focus:border-orange-400 focus:ring-0 outline-none transition-colors"
+                                   class="w-full px-4 py-3 rounded-xl border-2 border-bg-warm focus:border-primary focus:ring-0 outline-none transition-colors"
                                    placeholder="Как вас зовут?">
                         </div>
                         <div>
-                            <label class="block text-sm font-semibold text-gray-600 mb-2">Телефон</label>
+                            <label class="block text-sm font-semibold text-muted mb-2">Телефон</label>
                             <input type="tel" required
-                                   class="w-full px-4 py-3 rounded-xl border-2 border-gray-100 focus:border-orange-400 focus:ring-0 outline-none transition-colors"
+                                   class="w-full px-4 py-3 rounded-xl border-2 border-bg-warm focus:border-primary focus:ring-0 outline-none transition-colors"
                                    placeholder="+373 ___ __ __ __">
                         </div>
                         <div>
-                            <label class="block text-sm font-semibold text-gray-600 mb-2">Интересующий курс</label>
-                            <select class="w-full px-4 py-3 rounded-xl border-2 border-gray-100 focus:border-orange-400 focus:ring-0 outline-none transition-colors bg-white">
+                            <label class="block text-sm font-semibold text-muted mb-2">Интересующий курс</label>
+                            <select class="w-full px-4 py-3 rounded-xl border-2 border-bg-warm focus:border-primary focus:ring-0 outline-none transition-colors bg-white">
                                 <option value="">Выберите направление</option>
                                 <option value="cook">Повар</option>
                                 <option value="confectioner">Кондитер</option>
@@ -378,7 +413,7 @@
                             </select>
                         </div>
                         <button type="submit"
-                                class="w-full bg-gradient-to-r from-orange-500 via-pink-500 to-violet-500 text-white py-4 rounded-2xl font-bold text-lg shadow-soft hover:shadow-soft-lg hover:scale-[1.02] transition-all">
+                                class="w-full bg-gradient-to-r from-primary via-tertiary to-accent text-white py-4 rounded-2xl font-bold text-lg shadow-coral hover:scale-[1.02] transition-all">
                             Отправить заявку
                         </button>
                     </form>
@@ -388,34 +423,35 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12">
+    <footer class="bg-gradient-to-br from-accent-dark to-dark text-white py-12">
         <div class="max-w-7xl mx-auto px-4">
+            <hr class="border-t border-primary-soft/30 mb-10">
             <div class="grid md:grid-cols-3 gap-8 mb-8">
                 <div>
                     <div class="flex items-center gap-3 mb-4">
-                        <div class="w-10 h-10 bg-gradient-to-br from-orange-400 to-pink-400 rounded-xl flex items-center justify-center">
+                        <div class="w-10 h-10 bg-gradient-to-br from-primary to-tertiary rounded-xl flex items-center justify-center shadow-coral">
                             <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
                             </svg>
                         </div>
                         <span class="text-xl font-bold">Профессия</span>
                     </div>
-                    <p class="text-gray-400 text-sm leading-relaxed">
+                    <p class="text-white/70 text-sm leading-relaxed">
                         Учебный центр в Тирасполе. Обучаем востребованным профессиям с 2009 года.
                     </p>
                 </div>
                 <div>
                     <h4 class="font-bold mb-4">Направления</h4>
-                    <ul class="space-y-2 text-gray-400 text-sm">
-                        <li><a href="#" class="hover:text-orange-400 transition-colors">Кулинария</a></li>
-                        <li><a href="#" class="hover:text-pink-400 transition-colors">Индустрия красоты</a></li>
-                        <li><a href="#" class="hover:text-violet-400 transition-colors">Творчество</a></li>
-                        <li><a href="#" class="hover:text-blue-400 transition-colors">Рабочие профессии</a></li>
+                    <ul class="space-y-2 text-white/70 text-sm">
+                        <li><a href="#" class="hover:text-secondary transition-colors">Кулинария</a></li>
+                        <li><a href="#" class="hover:text-primary-soft transition-colors">Индустрия красоты</a></li>
+                        <li><a href="#" class="hover:text-tertiary-soft transition-colors">Творчество</a></li>
+                        <li><a href="#" class="hover:text-accent-soft transition-colors">Рабочие профессии</a></li>
                     </ul>
                 </div>
                 <div>
                     <h4 class="font-bold mb-4">Контакты</h4>
-                    <ul class="space-y-2 text-gray-400 text-sm">
+                    <ul class="space-y-2 text-white/70 text-sm">
                         <li>0 777 55722</li>
                         <li>0 533 44321</li>
                         <li>г. Тирасполь, ул. Юности, 10/3</li>
@@ -423,7 +459,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="border-t border-gray-800 pt-8 text-center text-gray-500 text-sm">
+            <div class="border-t border-white/10 pt-8 text-center text-white/50 text-sm">
                 <p>© 2024 Учебный центр «Профессия». Все права защищены.</p>
             </div>
         </div>
@@ -458,6 +494,10 @@
                     <span class="font-medium">Colorful</span>
                     <span class="text-xs text-slate-400">Красочный</span>
                 </a>
+                <a href="blossom.html" class="flex items-center justify-between px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-indigo-600 transition">
+                    <span class="font-medium">Blossom</span>
+                    <span class="text-xs text-slate-400">Цветение сакуры</span>
+                </a>
                 <a href="minimal.html" class="flex items-center justify-between px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-indigo-600 transition">
                     <span class="font-medium">Minimal</span>
                     <span class="text-xs text-slate-400">Минимализм</span>
@@ -482,7 +522,7 @@
         </div>
 
         <button @click="open = !open"
-                class="flex items-center justify-center w-14 h-14 rounded-full bg-slate-900 text-white shadow-lg shadow-slate-400/30 hover:bg-slate-800 hover:scale-105 transition-all">
+                class="flex items-center justify-center w-14 h-14 rounded-full bg-gradient-to-br from-primary to-tertiary text-white shadow-coral hover:scale-110 transition-all">
             <svg x-show="!open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
             </svg>
